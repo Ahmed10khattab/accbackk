@@ -10,7 +10,7 @@ const notification=require('./routes/notification')
 const posts=require('./routes/posts')
 const order=require('./routes/order')
 const modelfile=require('./models/file');
-const file=require('./controller/File');
+const file=require('./controller/File') ;
 
 
 
