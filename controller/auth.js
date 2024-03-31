@@ -11,8 +11,7 @@ const register = async (req, res) => {
         const adduser = new User({
             email: req.body.email,
             password: hash,
-            userName: req.body.userName,
-             
+            userName: req.body.userName,            
             age:req.body.age,
             tokenDevice:req.body.tokenDevice,
             image:req.body.image,
@@ -28,7 +27,8 @@ const register = async (req, res) => {
                  return res.status(401).json('email already exist')
                 } ;
             const saveduser = await adduser.save();
-            res.status(201).json(saveduser);
+            const{userName,email}=adduser._doc
+            res.status(201).json({userName:userName,email:email});
         } 
         catch (error) {
             res.status(400).json(error);
