@@ -11,9 +11,8 @@ const register = async (req, res) => {
         const adduser = new User({
             email: req.body.email,
             password: hash,
-            username: req.body.username,
-            lastName:req.body.email,
-            firstName:req.body.firstName,
+            userName: req.body.userName,
+             
             age:req.body.age,
             tokenDevice:req.body.tokenDevice,
             image:req.body.image,
