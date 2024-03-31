@@ -52,7 +52,7 @@ const login = async (req, res) => {
         }
 
         const token = jwt.sign({ _id: user._id, isAdmin: user.isAdmin }, 'sec');
-        const { email, password, isAdmin, ...other } = user._doc;
+        const {image ,email, password, isAdmin, ...other } = user._doc;
         res.header('access_token', token).send({ token: token, user: other });
 
 
