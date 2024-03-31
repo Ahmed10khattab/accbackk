@@ -27,7 +27,7 @@ const register = async (req, res) => {
                  return res.status(401).json('email already exist')
                 } ;
             const saveduser = await adduser.save();
-            const{userName,email}=adduser._doc
+            
             res.status(201).json(saveduser);
         } 
         catch (error) {
